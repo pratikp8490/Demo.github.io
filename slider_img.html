@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PSD 5</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/slick.css">  
+	<link rel="stylesheet" type="text/css" href="css/slick-theme.css">
+
+
+	<style>
+		.slider_main{
+			padding: 50px;
+		}
+		.slider_main_part{
+			padding: 50px;
+		}
+		.slider_img{
+			background-color: #80b435;
+			text-align: center;
+			height: 500px;
+		}
+		.slider_img h1{
+			margin-top: 40%;
+		}
+		.slider_snatra{
+			width: 83%;
+			height: 106%;
+			position: relative;
+			left: 155px;
+			bottom: 30px;
+			z-index: 1;
+		}
+		.slider_tomato{
+			width: 110%;
+			position: relative;
+			top: 55px;
+			left: 10px;
+			z-index: 1;	
+		}
+		.slider_img img{
+			float: right;
+		}
+		.img_btn{
+			float: right;
+			position: relative;
+			top: 70px;
+			right: 290px;
+			z-index: 1;
+		}
+	</style>
+</head>
+<body>	
+	<section class="bg-light">
+		<div class="img_btn">
+			<img src="images/arrow2.png" class="prev1">	
+			<img src="images/arrow1.png" class="next1">
+		</div>
+		
+
+		<div class="slidea">
+			<div>
+
+				<div class="container slider_main_part">
+					<div class="row"> 
+						<div class="col-sm-7 bg-white">
+							<img src="images/santra.png" class="slider_snatra">
+						</div>
+						<div class="col-sm-5 slider_img text-light">
+							<h1>ORGANIC</h1>
+							<h2>FOODS</h2>
+							<h5>Fruits</h5>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div>
+				<div class="container slider_main_part">
+					<div class="row"> 
+						<div class="col-sm-7 bg-white">
+							<img src="images/tomato.png" class="slider_tomato">
+						</div>
+						<div class="col-sm-5 slider_img text-light">
+							<h1>FRESH</h1>
+							<h2>FRUITS</h2>
+							<h5>Fruits</h5>
+
+						</div>
+
+					</div>
+				</div>  
+			</div>
+		</div>
+	</section>
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery-2.2.0.min.js"></script>
+	<script src="js/slick.min.js"></script>
+	<script src="js/slick.js"></script>
+	<script>
+		$('.slidea').slick({
+			infinite: true,
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			prevArrow:".prev1",
+			nextArrow:".next1",
+			// responsive: [
+			// {
+			// 	breakpoint: 1024,
+			// 	settings: {
+			// 		slidesToShow: 2,
+			// 		infinite: false,
+			// 	}
+			// },
+			// {
+			// 	breakpoint: 600,
+			// 	settings: {
+			// 		slidesToShow: 1,
+			// 	}
+			// },
+			// {
+			// 	breakpoint: 480,
+			// 	settings: {
+			// 		slidesToShow: 1,
+			// 	}
+			// }
+			// ]
+		});
+
+	</script>
+</body>
+</html>

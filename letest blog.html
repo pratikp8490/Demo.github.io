@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Letest Blog</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/slick.css">  
+  <link rel="stylesheet" type="text/css" href="css/slick-theme.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.6.0/css/all.min.css">
+  <style type="text/css">
+    .letest_blog_card{
+      width: 530px;
+      height: 460px;
+    }
+    .letest_blog_card_2{
+      width: 530px;
+      height: 460px;
+      margin-left: 30px;
+    }
+    .letest_blog_heading h1{
+      color: #ed6663;
+      padding: 20px 0px 20px 0px;
+      }
+      .latest_blog_btn {
+        background-color:#80b435;
+        padding: 8px 30px;
+        border-radius: 5px;
+        text-decoration: none!important;
+      }
+      .latest_blog_btn:hover{
+        background-color: #000;
+        color: #fff!important;
+      }
+      .blog_cart_img{
+        width: 530px;
+        height: 300px;
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="bg-light p-5">
+      <div class="letest_blog_heading">
+        <h1 class="text-uppercase text-center"><span class="best"> Latest</span>Blog</h1>
+      </div>
+      <div class="container">
+        <div class="row">
+         <div class="bg-white letest_blog_card border">
+          <img class="blog_cart_img" src="images/latest1.jpg">
+          <div class="card-body">
+            <h6>Lorem ispum dolor sit amet, consectetur adipiscing elit.</h6>
+            <p>Ut eget cursur. Curabitur lacinia porta odio,id accumsan turpis ultricies id.</p>
+            <a href="#" class="text-white latest_blog_btn">READ<b>MORE</b></a>
+          </div>
+        </div>
+        <div class="bg-white letest_blog_card_2 border">
+          <img class="blog_cart_img" src="images/latest.jpg">
+          <div class="card-body">
+            <h6>Lorem ispum dolor sit amet, consectetur adipiscing elit.</h6>
+            <p>Ut eget cursur. Curabitur lacinia porta odio,id accumsan turpis ultricies id.</p>
+            <a href="#" class="text-white latest_blog_btn">READ<b>MORE</b></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="container">
+      <div class="row pb-4">
+        <div class="bg-white latest_blog_main_div">
+          <div class="col-sm-12 col-lg-12 col-12 latest_blog_content">
+            <img src="images/latest1.jpg">
+            <h6 class="mt-4">Lorem ispum dolor sit amet, consectetur adipiscing elit.</h6>
+            <p>Ut eget cursur. Curabitur lacinia porta odio,id accumsan turpis ultricies id.</p>
+            <a href="#" class="text-white latest_blog_btn">READ<b>MORE</b></a>
+          </div>
+        </div>
+      </div>
+    </div> -->
+  </section>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery-2.2.0.min.js" type="text/javascript"></script>
+  <script src="js/slick.js" type="text/javascript" charset="utf-8"></script>
+  <script>
+    $(document).on('ready', function() {
+
+      $(".regular").slick({
+        infinite: true,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        prevArrow:".prev",
+        nextArrow:".next",
+        dots: true,
+        responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 3,
+            infinite: true,
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 1,
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+          }
+        }
+        ]
+      });
+      $(".center").slick({
+        dots: true,
+        infinite: true,
+        centerMode: true,
+        slidesToShow: 5,
+        slidesToScroll: 3
+      });
+    });
+  </script>
+
+</body>
+</html>

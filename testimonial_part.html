@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Letest Blog</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/slick.css">  
+  <link rel="stylesheet" type="text/css" href="css/slick-theme.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.6.0/css/all.min.css">
+  <style type="text/css">
+
+    /*.main_part{
+      color: #333;
+      text-align: center;
+      margin: 0 auto;
+    }*/
+
+    /*h1 {
+      font-weight: normal;
+    }*/
+    ul{
+      margin: 0;
+      padding: 0;
+      display: inline-block;
+    }
+
+    .testimonial_bottom_part li {
+      font-size: 10px;
+      text-align: center;
+      list-style-type: none;
+      padding: 1em;
+      background-color: #eeeeee;
+      text-transform: uppercase;
+      border: 1px solid #eeeeee;
+      width: 75px;
+      margin: 1em;
+    }
+
+    li span {
+      display: block;
+      font-size: 10px;
+    }
+
+    .regular1{
+      background-color: #ED6663;
+      padding: 40px 0px 40px 0px;
+    }
+    .testimg{
+      margin-left: 220px;
+      position: relative;
+    }
+    .dunny_text{
+      padding: 10px 10px 10px 50px;
+    }
+    .star{
+      color: #80b435;
+    }
+    .testimonial_bottom_part_img{
+      display: inline-block;
+    }
+    .testimonial_bottom_img{
+      width: 210px;
+      display: inline-block;
+    }
+    .testimonial_bottom_part{
+      padding: 15px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Testimonal and product part start -->
+  <section class="bg-light">
+    <div class="container py-5">
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="regular1 text-center">
+            <div>
+              <img src="images/test.png" class="testimg">
+              <div class="dunny_text text-light">
+                <p>Nulla augue ipsum, finibus ut odio ac, gravida euismod libero. Pellentesque tincidunt arcu eget dui vehicula, in vestibulum</p>
+                <h6 class="text-uppercase text-light">Danny Bluestone  Founder & CEO</h6>
+              </div>
+            </div>
+            <div>
+              <img src="images/test1.png" class="testimg">
+              <div class="dunny_text text-light">
+                <p>Etiam at gravida nisi. Vivamus consequat fringilla dignissim. Cras malesuada scelerisque lacus,nec faucibus sapien varius a.</p>
+                <h6 class="text-uppercase text-light">ILHAM KADRI CEO</h6>
+              </div>
+            </div>
+            <div>
+              <img src="images/test2.png" class="testimg">
+              <div class="dunny_text text-light">
+                <p>In hac habitasse dictumst.Curabitur rhoncus augue sed nibh vulputate malesuada.Nam elementum at elit eu volutpat.</p>
+                <h6 class="text-uppercase text-light">MARILLYN HEWSON Chif Executive's CEO</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6">
+          <div class="border testimonial_bottom_part">
+            <ul>
+              <li><b><span id="days"></span>days</b></li>
+              <li><b><span id="hours"></span>Hours</b></li>
+              <li><b><span id="minutes"></span>Minutes</b></li>
+              <li><b><span id="seconds"></span>Seconds</b></li>
+            </ul>
+            <div class="testimonial_bottom_part_img text-center">
+              <img src="images/tomato.png" class="testimonial_bottom_img">          
+              <h4>Tomoto</h4>
+              <p>Lorem ipsum dolor sit amet,Consectetur adipiscing elit.</p>
+              <i class="fa fa-star active star"></i>
+              <i class="fa fa-star active star"></i>
+              <i class="fa fa-star active star"></i>
+              <i class="fa fa-star active star"></i>
+              <i class="fa fa-star unactive star"></i>   
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery-2.2.0.min.js" type="text/javascript"></script>
+  <script src="js/slick.js" type="text/javascript" charset="utf-8"></script>
+  <script>
+    $(document).on('ready', function() {
+      $(".regular1").slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        prevArrow:".prev",
+        nextArrow:".next",
+        dots: true,
+        responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 1,
+            infinite: true,
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 1,
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+          }
+        }
+        ]
+      });
+      $(".center").slick({
+        dots: true,
+        infinite: true,
+        centerMode: true,
+        slidesToShow: 5,
+        slidesToScroll: 3
+      });
+    });
+
+    const second = 1000,
+    minute = second * 60,
+    hour = minute * 60,
+    day = hour * 24;
+
+    let countDown = new Date('Sep 30, 2020 00:00:00').getTime(),
+    x = setInterval(function() {
+
+      let now = new Date().getTime(),
+      distance = countDown - now;
+
+      document.getElementById('days').innerText = Math.floor(distance / (day)),
+      document.getElementById('hours').innerText = Math.floor((distance % (day)) / (hour)),
+      document.getElementById('minutes').innerText = Math.floor((distance % (hour)) / (minute)),
+      document.getElementById('seconds').innerText = Math.floor((distance % (minute)) / second);
+
+      //do something later when date is reached
+      //if (distance < 0) {
+      //  clearInterval(x);
+      //  'IT'S MY BIRTHDAY!;
+      //}
+
+    }, second)
+  </script>
+
+</body>
+</html>
